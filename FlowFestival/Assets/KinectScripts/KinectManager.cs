@@ -12,7 +12,11 @@ public class KinectManager : MonoBehaviour
 {
 	public enum Smoothing : int { None, Default, Medium, Aggressive }
 
-	public GameObject krogla;	
+	//MOJA REFERENCE LUKA
+	public GameObject quad;	
+	public Material mat;
+	public GameObject sklepMarker;
+
 	// Public Bool to determine how many players there are. Default of one user.
 	public bool TwoUsers = false;
 	
@@ -1318,7 +1322,13 @@ public class KinectManager : MonoBehaviour
 			instance = null;
 		}
 	}
-	
+	void SaveTextureToFile( Texture2D tex)
+	{
+		byte[] bytes=tex.EncodeToPNG();
+		File.WriteAllBytes (Application.dataPath + "/../SavedScreen.png", bytes);
+		//var binary= new BinaryWriter(file);
+		//binary.Write(bytes);
+	}
 	// Draw the Histogram Map on the GUI.
     void OnGUI()
     {
@@ -1342,11 +1352,13 @@ public class KinectManager : MonoBehaviour
 					
 					float displayWidth = cameraRect.width * displayMapsWidthPercent;
 					float displayHeight = cameraRect.width * displayMapsHeightPercent;
-					usersMapRect = new Rect(0, Screen.height, Screen.width, -Screen.height);
-					//usersMapRect = new Rect(cameraRect.width - displayWidth, cameraRect.height, displayWidth, -displayHeight);
+					//usersMapRect = new Rect(0, Screen.height, Screen.width, -Screen.height);
+					usersMapRect = new Rect(cameraRect.width - displayWidth, cameraRect.height, displayWidth, -displayHeight);
 				}
-
+				//MOJA KODA LUKA
+				//SaveTextureToFile( usersLblTex );
 	            GUI.DrawTexture(usersMapRect, usersLblTex);
+				mat.mainTexture=usersLblTex;
 	        }
 
 			else if(ComputeColorMap && (/**(allUsers.Count == 0) ||*/ DisplayColorMap))
@@ -1380,7 +1392,7 @@ public class KinectManager : MonoBehaviour
 			}
 		}
     }
-	
+
 	// Update the User Map
     void UpdateUserMap()
     {
@@ -1997,6 +2009,14 @@ public class KinectManager : MonoBehaviour
 				
 				//Color lineColor = playerJointsTracked[i] && playerJointsTracked[parent] ? Color.red : Color.yellow;
 				DrawLine(aTexture, (int)posParent.x, (int)posParent.y, (int)posJoint.x, (int)posJoint.y, Color.yellow);
+
+				//MOJA KODA LUKA
+				Vector3 pozicija = new Vector3();
+				Debug.Log("posParentx posParenty posJoingx posJointy"+" ,"+(int)posParent.x+" ,"+(int)posParent.y+" ,"+(int)posJoint.x+" ,"+(int)posJoint.y);
+				pozicija.x= (posJoint.x/aTexture.width)*quad.transform.localScale.x+(quad.transform.position.x-0.5f*quad.transform.localScale.x) ;
+				pozicija.y= (posJoint.y/aTexture.height)*quad.transform.localScale.y + (quad.transform.position.y-0.5f*quad.transform.localScale.y);
+				pozicija.z= quad.transform.position.z;
+				Instantiate(sklepMarker, pozicija, quad.transform.rotation);
 			}
 		}
 	}
