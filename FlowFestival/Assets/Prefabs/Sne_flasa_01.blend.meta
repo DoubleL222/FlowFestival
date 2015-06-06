@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 8362a74e9a5cb8d4a84d4b401aef7c8d
+timeCreated: 1432121012
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Sne_flasa_01
+    100002: //RootNode
+    100004: Sne_flasa_01_001
+    100006: Sne_flasa_01_002
+    100008: Sne_flasa_01_003
+    100010: Sne_flasa_01_004
+    100012: Sne_flasa_01_005
+    100014: Sne_flasa_01_006
+    100016: Sne_flasa_01_007
+    100018: Sne_flasa_01_008
+    100020: Sne_flasa_01_009
+    100022: Sne_flasa_01_010
+    100024: Sne_flasa_01_011
+    100026: Sne_flasa_01_012
+    100028: Sne_flasa_01_013
+    100030: Sne_flasa_01_014
+    100032: Sne_flasa_01_015
+    100034: Sne_flasa_01_016
+    100036: Sne_flasa_01_017
+    400000: //RootNode
+    400002: Sne_flasa_01
+    400004: Sne_flasa_01_001
+    400006: Sne_flasa_01_002
+    400008: Sne_flasa_01_003
+    400010: Sne_flasa_01_004
+    400012: Sne_flasa_01_005
+    400014: Sne_flasa_01_006
+    400016: Sne_flasa_01_007
+    400018: Sne_flasa_01_008
+    400020: Sne_flasa_01_009
+    400022: Sne_flasa_01_010
+    400024: Sne_flasa_01_011
+    400026: Sne_flasa_01_012
+    400028: Sne_flasa_01_013
+    400030: Sne_flasa_01_014
+    400032: Sne_flasa_01_015
+    400034: Sne_flasa_01_016
+    400036: Sne_flasa_01_017
+    2300000: Sne_flasa_01
+    2300002: Sne_flasa_01_001
+    2300004: Sne_flasa_01_002
+    2300006: Sne_flasa_01_003
+    2300008: Sne_flasa_01_004
+    2300010: Sne_flasa_01_005
+    2300012: Sne_flasa_01_006
+    2300014: Sne_flasa_01_007
+    2300016: Sne_flasa_01_008
+    2300018: Sne_flasa_01_009
+    2300020: Sne_flasa_01_010
+    2300022: Sne_flasa_01_011
+    2300024: Sne_flasa_01_012
+    2300026: Sne_flasa_01_013
+    2300028: Sne_flasa_01_014
+    2300030: Sne_flasa_01_015
+    2300032: Sne_flasa_01_016
+    2300034: Sne_flasa_01_017
+    3300000: Sne_flasa_01
+    3300002: Sne_flasa_01_001
+    3300004: Sne_flasa_01_002
+    3300006: Sne_flasa_01_003
+    3300008: Sne_flasa_01_004
+    3300010: Sne_flasa_01_005
+    3300012: Sne_flasa_01_006
+    3300014: Sne_flasa_01_007
+    3300016: Sne_flasa_01_008
+    3300018: Sne_flasa_01_009
+    3300020: Sne_flasa_01_010
+    3300022: Sne_flasa_01_011
+    3300024: Sne_flasa_01_012
+    3300026: Sne_flasa_01_013
+    3300028: Sne_flasa_01_014
+    3300030: Sne_flasa_01_015
+    3300032: Sne_flasa_01_016
+    3300034: Sne_flasa_01_017
+    4300000: Sne_flasa_01_007
+    4300002: Sne_flasa_01_010
+    4300004: Sne_flasa_01_006
+    4300006: Sne_flasa_01_005
+    4300008: Sne_flasa_01_004
+    4300010: Sne_flasa_01_003
+    4300012: Sne_flasa_01_002
+    4300014: Sne_flasa_01_001
+    4300016: Sne_flasa_01_016
+    4300018: Sne_flasa_01_015
+    4300020: Sne_flasa_01_014
+    4300022: Sne_flasa_01_012
+    4300024: Sne_flasa_01_011
+    4300026: Sne_flasa_01_009
+    4300028: Sne_flasa_01
+    4300030: Sne_flasa_01_017
+    4300032: Sne_flasa_01_008
+    4300034: Sne_flasa_01_013
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

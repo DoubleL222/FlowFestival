@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: c24ee4679cc8c7a42ae1a599ee0cad66
+timeCreated: 1432120986
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Sne_absolut
+    100004: Sne_absolut_001
+    100006: Sne_absolut_002
+    100008: Sne_absolut_003
+    100010: Sne_absolut_004
+    100012: Sne_absolut_005
+    100014: Sne_absolut_006
+    100016: Sne_absolut_007
+    100018: Sne_absolut_009
+    100020: Sne_absolut_010
+    100022: Sne_absolut_011
+    100024: Sne_absolut_012
+    100026: Sne_absolut_013
+    100028: Sne_absolut_014
+    100030: Sne_absolut_015
+    100032: Sne_absolut_016
+    100034: Sne_absolut_017
+    100036: Sne_low
+    400000: //RootNode
+    400002: Sne_absolut
+    400004: Sne_absolut_001
+    400006: Sne_absolut_002
+    400008: Sne_absolut_003
+    400010: Sne_absolut_004
+    400012: Sne_absolut_005
+    400014: Sne_absolut_006
+    400016: Sne_absolut_007
+    400018: Sne_absolut_009
+    400020: Sne_absolut_010
+    400022: Sne_absolut_011
+    400024: Sne_absolut_012
+    400026: Sne_absolut_013
+    400028: Sne_absolut_014
+    400030: Sne_absolut_015
+    400032: Sne_absolut_016
+    400034: Sne_absolut_017
+    400036: Sne_low
+    2300000: Sne_absolut
+    2300002: Sne_absolut_001
+    2300004: Sne_absolut_002
+    2300006: Sne_absolut_003
+    2300008: Sne_absolut_004
+    2300010: Sne_absolut_005
+    2300012: Sne_absolut_006
+    2300014: Sne_absolut_007
+    2300016: Sne_absolut_009
+    2300018: Sne_absolut_010
+    2300020: Sne_absolut_011
+    2300022: Sne_absolut_012
+    2300024: Sne_absolut_013
+    2300026: Sne_absolut_014
+    2300028: Sne_absolut_015
+    2300030: Sne_absolut_016
+    2300032: Sne_absolut_017
+    2300034: Sne_low
+    3300000: Sne_absolut
+    3300002: Sne_absolut_001
+    3300004: Sne_absolut_002
+    3300006: Sne_absolut_003
+    3300008: Sne_absolut_004
+    3300010: Sne_absolut_005
+    3300012: Sne_absolut_006
+    3300014: Sne_absolut_007
+    3300016: Sne_absolut_009
+    3300018: Sne_absolut_010
+    3300020: Sne_absolut_011
+    3300022: Sne_absolut_012
+    3300024: Sne_absolut_013
+    3300026: Sne_absolut_014
+    3300028: Sne_absolut_015
+    3300030: Sne_absolut_016
+    3300032: Sne_absolut_017
+    3300034: Sne_low
+    4300000: Sne_absolut
+    4300002: Sne_absolut_005
+    4300004: Sne_absolut_004
+    4300006: Sne_absolut_002
+    4300008: Sne_absolut_012
+    4300010: Sne_absolut_009
+    4300012: Sne_absolut_007
+    4300014: Sne_absolut_001
+    4300016: Sne_absolut_010
+    4300018: Sne_absolut_016
+    4300020: Sne_absolut_014
+    4300022: Sne_absolut_011
+    4300024: Sne_absolut_017
+    4300026: Sne_absolut_015
+    4300028: Sne_absolut_013
+    4300030: Sne_absolut_003
+    4300032: Sne_absolut_006
+    4300034: Sne_low
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
