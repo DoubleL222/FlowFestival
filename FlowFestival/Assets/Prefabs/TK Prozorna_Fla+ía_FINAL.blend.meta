@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 1d0934abc1803c940846f8bcc876d6d2
+timeCreated: 1433704550
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: TK_ProzornaFlasa_FINAL
+    100004: TK_ProzornaFlasa_FINAL_001
+    100006: TK_ProzornaFlasa_FINAL_002
+    100008: TK_ProzornaFlasa_FINAL_003
+    100010: TK_ProzornaFlasa_FINAL_004
+    100012: TK_ProzornaFlasa_FINAL_005
+    100014: TK_ProzornaFlasa_FINAL_006
+    100016: TK_ProzornaFlasa_FINAL_007
+    100018: TK_ProzornaFlasa_FINAL_008
+    100020: TK_ProzornaFlasa_FINAL_009
+    100022: TK_ProzornaFlasa_FINAL_010
+    100024: TK_ProzornaFlasa_FINAL_011
+    100026: TK_ProzornaFlasa_FINAL_012
+    100028: TK_ProzornaFlasa_FINAL_013
+    100030: TK_ProzornaFlasa_FINAL_014
+    100032: TK_ProzornaFlasa_FINAL_015
+    100034: TK_ProzornaFlasa_FINAL_016
+    100036: TK_ProzornaFlasa_FINAL_017
+    100038: TK_ProzornaFlasa_FINAL_018
+    100040: TK_ProzornaFlasa_FINAL_019
+    100042: TK_ProzornaFlasa_FINAL_020
+    100044: TK_ProzornaFlasa_FINAL_021
+    100046: TK_ProzornaFlasa_FINAL_022
+    100048: TK_ProzornaFlasa_FINAL_023
+    400000: //RootNode
+    400002: TK_ProzornaFlasa_FINAL
+    400004: TK_ProzornaFlasa_FINAL_001
+    400006: TK_ProzornaFlasa_FINAL_002
+    400008: TK_ProzornaFlasa_FINAL_003
+    400010: TK_ProzornaFlasa_FINAL_004
+    400012: TK_ProzornaFlasa_FINAL_005
+    400014: TK_ProzornaFlasa_FINAL_006
+    400016: TK_ProzornaFlasa_FINAL_007
+    400018: TK_ProzornaFlasa_FINAL_008
+    400020: TK_ProzornaFlasa_FINAL_009
+    400022: TK_ProzornaFlasa_FINAL_010
+    400024: TK_ProzornaFlasa_FINAL_011
+    400026: TK_ProzornaFlasa_FINAL_012
+    400028: TK_ProzornaFlasa_FINAL_013
+    400030: TK_ProzornaFlasa_FINAL_014
+    400032: TK_ProzornaFlasa_FINAL_015
+    400034: TK_ProzornaFlasa_FINAL_016
+    400036: TK_ProzornaFlasa_FINAL_017
+    400038: TK_ProzornaFlasa_FINAL_018
+    400040: TK_ProzornaFlasa_FINAL_019
+    400042: TK_ProzornaFlasa_FINAL_020
+    400044: TK_ProzornaFlasa_FINAL_021
+    400046: TK_ProzornaFlasa_FINAL_022
+    400048: TK_ProzornaFlasa_FINAL_023
+    2300000: TK_ProzornaFlasa_FINAL
+    2300002: TK_ProzornaFlasa_FINAL_001
+    2300004: TK_ProzornaFlasa_FINAL_002
+    2300006: TK_ProzornaFlasa_FINAL_003
+    2300008: TK_ProzornaFlasa_FINAL_004
+    2300010: TK_ProzornaFlasa_FINAL_005
+    2300012: TK_ProzornaFlasa_FINAL_006
+    2300014: TK_ProzornaFlasa_FINAL_007
+    2300016: TK_ProzornaFlasa_FINAL_008
+    2300018: TK_ProzornaFlasa_FINAL_009
+    2300020: TK_ProzornaFlasa_FINAL_010
+    2300022: TK_ProzornaFlasa_FINAL_011
+    2300024: TK_ProzornaFlasa_FINAL_012
+    2300026: TK_ProzornaFlasa_FINAL_013
+    2300028: TK_ProzornaFlasa_FINAL_014
+    2300030: TK_ProzornaFlasa_FINAL_015
+    2300032: TK_ProzornaFlasa_FINAL_016
+    2300034: TK_ProzornaFlasa_FINAL_017
+    2300036: TK_ProzornaFlasa_FINAL_018
+    2300038: TK_ProzornaFlasa_FINAL_019
+    2300040: TK_ProzornaFlasa_FINAL_020
+    2300042: TK_ProzornaFlasa_FINAL_021
+    2300044: TK_ProzornaFlasa_FINAL_022
+    2300046: TK_ProzornaFlasa_FINAL_023
+    3300000: TK_ProzornaFlasa_FINAL
+    3300002: TK_ProzornaFlasa_FINAL_001
+    3300004: TK_ProzornaFlasa_FINAL_002
+    3300006: TK_ProzornaFlasa_FINAL_003
+    3300008: TK_ProzornaFlasa_FINAL_004
+    3300010: TK_ProzornaFlasa_FINAL_005
+    3300012: TK_ProzornaFlasa_FINAL_006
+    3300014: TK_ProzornaFlasa_FINAL_007
+    3300016: TK_ProzornaFlasa_FINAL_008
+    3300018: TK_ProzornaFlasa_FINAL_009
+    3300020: TK_ProzornaFlasa_FINAL_010
+    3300022: TK_ProzornaFlasa_FINAL_011
+    3300024: TK_ProzornaFlasa_FINAL_012
+    3300026: TK_ProzornaFlasa_FINAL_013
+    3300028: TK_ProzornaFlasa_FINAL_014
+    3300030: TK_ProzornaFlasa_FINAL_015
+    3300032: TK_ProzornaFlasa_FINAL_016
+    3300034: TK_ProzornaFlasa_FINAL_017
+    3300036: TK_ProzornaFlasa_FINAL_018
+    3300038: TK_ProzornaFlasa_FINAL_019
+    3300040: TK_ProzornaFlasa_FINAL_020
+    3300042: TK_ProzornaFlasa_FINAL_021
+    3300044: TK_ProzornaFlasa_FINAL_022
+    3300046: TK_ProzornaFlasa_FINAL_023
+    4300000: TK_ProzornaFlasa_FINAL_022
+    4300002: TK_ProzornaFlasa_FINAL_020
+    4300004: TK_ProzornaFlasa_FINAL_019
+    4300006: TK_ProzornaFlasa_FINAL_016
+    4300008: TK_ProzornaFlasa_FINAL_015
+    4300010: TK_ProzornaFlasa_FINAL_011
+    4300012: TK_ProzornaFlasa_FINAL_009
+    4300014: TK_ProzornaFlasa_FINAL
+    4300016: TK_ProzornaFlasa_FINAL_023
+    4300018: TK_ProzornaFlasa_FINAL_021
+    4300020: TK_ProzornaFlasa_FINAL_018
+    4300022: TK_ProzornaFlasa_FINAL_017
+    4300024: TK_ProzornaFlasa_FINAL_014
+    4300026: TK_ProzornaFlasa_FINAL_012
+    4300028: TK_ProzornaFlasa_FINAL_013
+    4300030: TK_ProzornaFlasa_FINAL_010
+    4300032: TK_ProzornaFlasa_FINAL_006
+    4300034: TK_ProzornaFlasa_FINAL_008
+    4300036: TK_ProzornaFlasa_FINAL_007
+    4300038: TK_ProzornaFlasa_FINAL_003
+    4300040: TK_ProzornaFlasa_FINAL_004
+    4300042: TK_ProzornaFlasa_FINAL_005
+    4300044: TK_ProzornaFlasa_FINAL_001
+    4300046: TK_ProzornaFlasa_FINAL_002
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
