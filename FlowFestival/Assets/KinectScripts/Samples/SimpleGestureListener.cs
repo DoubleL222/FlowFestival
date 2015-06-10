@@ -6,7 +6,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 {
 	// GUI Text to display the gesture messages.
 	public GUIText GestureInfo;
-	
+	private GameObject[] smeti;
 	// private bool to track if progress message has been displayed
 	private bool progressDisplayed;
 	
@@ -19,11 +19,11 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 		manager.DetectGesture(userId, KinectGestures.Gestures.Jump);
 		manager.DetectGesture(userId, KinectGestures.Gestures.Squat);
 
-//		manager.DetectGesture(userId, KinectGestures.Gestures.Push);
-//		manager.DetectGesture(userId, KinectGestures.Gestures.Pull);
+		manager.DetectGesture(userId, KinectGestures.Gestures.Push);
+		manager.DetectGesture(userId, KinectGestures.Gestures.Pull);
 		
-//		manager.DetectGesture(userId, KinectWrapper.Gestures.SwipeUp);
-//		manager.DetectGesture(userId, KinectWrapper.Gestures.SwipeDown);
+		//manager.DetectGesture(userId, KinectWrapper.Gestures.SwipeUp);
+		//manager.DetectGesture(userId, KinectWrapper.Gestures.SwipeDown);
 		
 		if(GestureInfo != null)
 		{
@@ -73,6 +73,24 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 	                              KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
 	{
 		string sGestureText = gesture + " detected";
+		Debug.Log (gesture + " detected");
+		if (gesture.ToString() == "SwipeRight") {
+			Debug.Log ("SWIPE RIGHT");
+			/*smeti = GameObject.FindGameObjectsWithTag("Frozen");
+			foreach ( GameObject smet in smeti){
+				smet.tag="Smeti";
+				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				rb.AddForce(1,0,0);
+			}*/
+		} else if (gesture.ToString() == "SwipeLeft") {
+			Debug.Log ("SWIPE LEFT");
+			smeti = GameObject.FindGameObjectsWithTag("Frozen");
+			/*foreach ( GameObject smet in smeti){
+				smet.tag="Smeti";
+				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				rb.AddForce(1,0,0);
+			}*/
+		}
 		if(gesture == KinectGestures.Gestures.Click)
 			sGestureText += string.Format(" at ({0:F1}, {1:F1})", screenPos.x, screenPos.y);
 		

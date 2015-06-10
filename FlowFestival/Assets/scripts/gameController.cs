@@ -11,13 +11,7 @@ public class gameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		for (int i=0; i<steviloSmeti; i++) {
-			w = Random.Range (-sirinaX / 2, sirinaX / 2);
-			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
-			h = visinaY;
-			int indeks =(int)(Random.Range(0,smeti.Length-1));
-			Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity);
-		}
+
 
 	}
 	

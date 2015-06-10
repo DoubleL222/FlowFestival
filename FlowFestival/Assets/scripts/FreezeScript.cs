@@ -19,8 +19,6 @@ public class FreezeScript : MonoBehaviour {
 	void OnTriggerExit(Collider col){
 		if (col.gameObject.tag == "Frozen") {
 			col.gameObject.tag = "Smeti";
-			col.attachedRigidbody.velocity = Vector3.zero;
-			col.attachedRigidbody.angularVelocity = Vector3.zero;
 		}
 	}
 	// Update is called once per frame

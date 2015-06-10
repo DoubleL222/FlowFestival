@@ -6,7 +6,7 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 {
 	// GUI Text to display the gesture messages.
 	public GUIText GestureInfo;
-	
+	public float swipeForce = 1.0f;	
 	private bool swipeLeft;
 	private bool swipeRight;
 
@@ -15,6 +15,13 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	{
 		if(swipeLeft)
 		{
+			Debug.Log ("SWIPE LEFT");
+			GameObject[] smeti = GameObject.FindGameObjectsWithTag("Frozen");
+			foreach ( GameObject smet in smeti){
+				smet.tag="Smeti";
+				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				rb.AddForce(1,0,0);
+			}
 			swipeLeft = false;
 			return true;
 		}
@@ -26,6 +33,13 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	{
 		if(swipeRight)
 		{
+			Debug.Log ("SWIPE RIGHT");
+			GameObject[] smeti = GameObject.FindGameObjectsWithTag("Frozen");
+			foreach ( GameObject smet in smeti){
+			smet.tag="Smeti";
+			Rigidbody rb = smet.GetComponent<Rigidbody>();
+			rb.AddForce(1,0,0);
+			}
 			swipeRight = false;
 			return true;
 		}

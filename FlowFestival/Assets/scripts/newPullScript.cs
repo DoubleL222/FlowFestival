@@ -5,12 +5,12 @@ using System.Linq;
 
 public class newPullScript : MonoBehaviour {
 	public int smetiNaMagnet = 5;
-	private List<GameObject> smeti;
-	public float dur= float.MinValue;
+//	private List<GameObject> smeti;
+	public float sphereSize = 1.5f;
 	public float speed = 1;
 	// Use this for initialization
 	void Start () {
-		smeti = new List<GameObject> ();
+//		smeti = new List<GameObject> ();
 		//Destroy (gameObject, dur);
 	}
 	
@@ -18,7 +18,7 @@ public class newPullScript : MonoBehaviour {
 	//public Transform target;
 
 	void FixedUpdate() {
-		Collider[] hitColliders = Physics.OverlapSphere(transform.position,1.5f);
+		Collider[] hitColliders = Physics.OverlapSphere(transform.position,sphereSize);
 		int i = 0;
 		//List<Collider> myList = hitColliders.ToList();
 		foreach(Collider currSmet in hitColliders ){

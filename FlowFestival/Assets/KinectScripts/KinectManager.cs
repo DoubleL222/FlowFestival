@@ -10,12 +10,13 @@ using System.Text;
 
 public class KinectManager : MonoBehaviour
 {
+	public GameObject Character;
 	public enum Smoothing : int { None, Default, Medium, Aggressive }
 
 	//MOJA REFERENCE LUKA
-	public GameObject quad;	
-	public Material mat;
-	public GameObject sklepMarker;
+	//public GameObject quad;	
+	//public Material mat;
+	//public GameObject sklepMarker;
 
 	// Public Bool to determine how many players there are. Default of one user.
 	public bool TwoUsers = false;
@@ -1098,7 +1099,7 @@ public class KinectManager : MonoBehaviour
 		}
 		
 		Debug.Log("Waiting for users.");
-			
+		Character.SetActive (false);
 		KinectInitialized = true;
 	}
 	
@@ -1356,9 +1357,6 @@ public class KinectManager : MonoBehaviour
 					usersMapRect = new Rect(cameraRect.width - displayWidth, cameraRect.height, displayWidth, -displayHeight);
 				}
 				//MOJA KODA LUKA
-				//SaveTextureToFile( usersLblTex );
-	            GUI.DrawTexture(usersMapRect, usersLblTex);
-				mat.mainTexture=usersLblTex;
 	        }
 
 			else if(ComputeColorMap && (/**(allUsers.Count == 0) ||*/ DisplayColorMap))
@@ -1612,7 +1610,7 @@ public class KinectManager : MonoBehaviour
 		if(AllPlayersCalibrated)
 		{
 			Debug.Log("All players calibrated.");
-			
+			Character.SetActive(true);
 			if(CalibrationText != null)
 			{
 				CalibrationText.GetComponent<GUIText>().text = "";
@@ -2011,12 +2009,12 @@ public class KinectManager : MonoBehaviour
 				DrawLine(aTexture, (int)posParent.x, (int)posParent.y, (int)posJoint.x, (int)posJoint.y, Color.yellow);
 
 				//MOJA KODA LUKA
-				Vector3 pozicija = new Vector3();
+			/*	Vector3 pozicija = new Vector3();
 				Debug.Log("posParentx posParenty posJoingx posJointy"+" ,"+(int)posParent.x+" ,"+(int)posParent.y+" ,"+(int)posJoint.x+" ,"+(int)posJoint.y);
 				pozicija.x= (posJoint.x/aTexture.width)*quad.transform.localScale.x+(quad.transform.position.x-0.5f*quad.transform.localScale.x) ;
 				pozicija.y= (posJoint.y/aTexture.height)*quad.transform.localScale.y + (quad.transform.position.y-0.5f*quad.transform.localScale.y);
 				pozicija.z= quad.transform.position.z;
-				Instantiate(sklepMarker, pozicija, quad.transform.rotation);
+				Instantiate(sklepMarker, pozicija, quad.transform.rotation);*/
 			}
 		}
 	}
