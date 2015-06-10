@@ -8,6 +8,20 @@ public class FreezeScript : MonoBehaviour {
 	
 	}
 
+/*	void OnCollisionEnter(Collision col)
+	{
+		if (col.gameObject.tag == "Smeti") {
+			col.gameObject.tag = "Frozen";
+			col.rigidbody.velocity = Vector3.zero;
+			col.rigidbody.angularVelocity = Vector3.zero;
+		}
+	}
+	void OnCollisionExit(Collision col){
+		if (col.gameObject.tag == "Frozen") {
+			col.gameObject.tag = "Smeti";
+		}
+	}*/
+
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag == "Smeti") {
@@ -16,7 +30,7 @@ public class FreezeScript : MonoBehaviour {
 			col.attachedRigidbody.angularVelocity = Vector3.zero;
 		}
 	}
-	void OnTriggerExit(Collider col){
+	void OnCollisionExit(Collider col){
 		if (col.gameObject.tag == "Frozen") {
 			col.gameObject.tag = "Smeti";
 		}

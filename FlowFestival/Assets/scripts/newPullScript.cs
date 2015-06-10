@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class newPullScript : MonoBehaviour {
-	public int smetiNaMagnet = 5;
+	public int smetiNaMagnet = 20;
 //	private List<GameObject> smeti;
 	public float sphereSize = 1.5f;
 	public float speed = 1;
+	public int i = 0;
 	// Use this for initialization
 	void Start () {
+		i = 0;
 //		smeti = new List<GameObject> ();
 		//Destroy (gameObject, dur);
 	}
@@ -19,7 +21,6 @@ public class newPullScript : MonoBehaviour {
 
 	void FixedUpdate() {
 		Collider[] hitColliders = Physics.OverlapSphere(transform.position,sphereSize);
-		int i = 0;
 		//List<Collider> myList = hitColliders.ToList();
 		foreach(Collider currSmet in hitColliders ){
 			if(currSmet.gameObject.tag =="Smeti"){
@@ -37,6 +38,7 @@ public class newPullScript : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider col)
 	{
+		i++;
 	/*	if (smeti.Count <= smetiNaMagnet) {
 			if (col.gameObject.tag == "Smeti") {
 				if (col.attachedRigidbody) {
@@ -49,6 +51,7 @@ public class newPullScript : MonoBehaviour {
 	}
 	void OnTriggerExit(Collider col)
 	{
+		i--;
 		Debug.Log ("EXITED TRIGGER");
 		col.attachedRigidbody.useGravity = true;
 	}
