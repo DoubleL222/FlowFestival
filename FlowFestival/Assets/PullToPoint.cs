@@ -24,7 +24,7 @@ public class PullToPoint : MonoBehaviour {
 				smet.tag = "Locked";
 				hasSmet = true;
 				Rigidbody rb = smet.GetComponent<Rigidbody>();
-				rb.useGravity = false;
+				if(rb!=null) rb.useGravity = false;
 				/*while(!hasSmet){
 					int index = (int)(Random.Range (0, hitColliders.Length - 1));
 					smet = hitColliders [index].gameObject;
@@ -43,8 +43,13 @@ public class PullToPoint : MonoBehaviour {
 		} else {
 			/*Rigidbody rb = smet.GetComponent<Rigidbody>();
 			rb.useGravity = false;*/
-			float step = speed * Time.deltaTime;
-			smet.transform.position = Vector3.MoveTowards (smet.transform.position, transform.position, step);
+
+			if(smet!=null){
+				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				if(rb!=null) rb.useGravity = false;
+				float step = speed * Time.deltaTime;
+				smet.transform.position = Vector3.MoveTowards (smet.transform.position, transform.position, step);
+			} else hasSmet = false;
 		}
 	}
 }

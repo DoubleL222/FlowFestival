@@ -19,23 +19,31 @@ public class levelMaker : MonoBehaviour {
 	private float l,w,h;
 	public GameObject[] smeti;
 	public Canvas meni;
+	public GameObject bottomWallCube;
+	public float zamikTal = 2.0f;
+	private GameObject[] staticneSmeti;
+	public float waitTime;
+	public float startTime;
 
 	private bool started;
 	// Use this for initialization
 	void Start () {
+		staticneSmeti = new GameObject[steviloSmeti];
 		GameObject center = Instantiate (levelCube, new Vector3(0,cubeSize/2.0f,0),Quaternion.identity) as GameObject;
 		GameObject leftWall = Instantiate (wallCube, new Vector3 (-cubeSize / 2.0f - zamik, cubeSize / 2.0f, 0), Quaternion.identity) as GameObject;
 		GameObject rightWall = Instantiate (wallCube, new Vector3 (cubeSize / 2.0f + zamik, cubeSize / 2.0f, 0), Quaternion.identity) as GameObject;
 		GameObject frontWall = Instantiate (wallCube, new Vector3 (0, cubeSize / 2.0f, cubeSize / 2.0f + zamik), Quaternion.identity) as GameObject;
 		GameObject backWall = Instantiate (wallCube, new Vector3 (0, cubeSize / 2.0f, -cubeSize / 2.0f - zamik), Quaternion.identity) as GameObject;
-		GameObject topWall = Instantiate (wallCube, new Vector3 (0, 0-zamik, 0), Quaternion.identity) as GameObject;
-		GameObject bottomWall = Instantiate (wallCube, new Vector3 (0, cubeSize+zamik, 0), Quaternion.identity) as GameObject;
+		GameObject bottomWall = Instantiate (bottomWallCube, new Vector3 (0, 0-zamikTal, 0), Quaternion.identity) as GameObject;
+		GameObject bottomBottomWall = Instantiate (bottomWallCube, new Vector3 (0, 0-2*zamikTal, 0), Quaternion.identity) as GameObject;
+		GameObject topWall = Instantiate (wallCube, new Vector3 (0, cubeSize+zamik, 0), Quaternion.identity) as GameObject;
 		leftWall.transform.localScale = new Vector3 (sirina, cubeSize, cubeSize);
 		rightWall.transform.localScale = new Vector3 (sirina, cubeSize, cubeSize);
 		frontWall.transform.localScale = new Vector3 (cubeSize, cubeSize, sirina);
 		backWall.transform.localScale = new Vector3 (cubeSize, cubeSize, sirina);
 		topWall.transform.localScale = new Vector3 (cubeSize, sirina, cubeSize);
-		bottomWall.transform.localScale = new Vector3 (cubeSize, sirina, cubeSize);
+		bottomWall.transform.localScale = new Vector3 (cubeSize*4, sirina, cubeSize*4);
+		bottomBottomWall.transform.localScale = new Vector3 (cubeSize*4, sirina, cubeSize*4);
 		center.transform.localScale = new Vector3 (cubeSize, cubeSize, cubeSize);
 		leftWall.transform.parent = levelFather.transform;
 		rightWall.transform.parent = levelFather.transform;
@@ -44,6 +52,7 @@ public class levelMaker : MonoBehaviour {
 		topWall.transform.parent = levelFather.transform;
 		bottomWall.transform.parent = levelFather.transform;
 		center.transform.parent = levelFather.transform;
+		bottomBottomWall.transform.parent = levelFather.transform;
 
 		started = false;
 	}
@@ -57,15 +66,18 @@ public class levelMaker : MonoBehaviour {
 			w = Random.Range (-sirinaX / 2, sirinaX / 2);
 			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
 			h = visinaY;
-			int indeks =(int)(Random.Range(0,smeti.Length-1));
+			//int indeks =(int)(Random.Range(0,smeti.Length-1));
+			int indeks = 0;
 			GameObject obj = Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity) as GameObject;
 			obj.gameObject.tag="Frozen";
+			staticneSmeti[i] = obj;
 		}
 		for(int i=0; i<steviloSmetiPrivlek; i++) {
 			w = Random.Range (-sirinaX / 2, sirinaX / 2);
 			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
 			h = visinaY;
-			int indeks =(int)(Random.Range(0,smeti.Length-1));
+			//int indeks =(int)(Random.Range(0,smeti.Length-1));
+			int indeks = 0;
 			GameObject obj = Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity) as GameObject;
 			obj.gameObject.tag="Smeti";
 		}

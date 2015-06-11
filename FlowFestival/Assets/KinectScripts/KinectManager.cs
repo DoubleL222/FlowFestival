@@ -1099,7 +1099,12 @@ public class KinectManager : MonoBehaviour
 		}
 		
 		Debug.Log("Waiting for users.");
-		//Character.SetActive (false);
+		Character.SetActive (false);
+		GameObject[] vezaneSmeti = GameObject.FindGameObjectsWithTag("Locked");
+		foreach (GameObject smet in vezaneSmeti) {
+			Rigidbody rb = smet.GetComponent<Rigidbody>();
+			if(rb!=null) rb.useGravity = true;
+		}
 		KinectInitialized = true;
 	}
 	
@@ -1610,7 +1615,7 @@ public class KinectManager : MonoBehaviour
 		if(AllPlayersCalibrated)
 		{
 			Debug.Log("All players calibrated.");
-			//Character.SetActive(true);
+			Character.SetActive(true);
 			if(CalibrationText != null)
 			{
 				CalibrationText.GetComponent<GUIText>().text = "";
@@ -1624,6 +1629,12 @@ public class KinectManager : MonoBehaviour
 		// If we lose player 1...
 		if(UserId == Player1ID)
 		{
+			Character.SetActive(false);
+			GameObject[] vezaneSmeti = GameObject.FindGameObjectsWithTag("Locked");
+			foreach (GameObject smet in vezaneSmeti) {
+				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				if(rb!=null) rb.useGravity = true;
+			}
 			// Null out the ID and reset all the models associated with that ID.
 			Player1ID = 0;
 			Player1Index = 0;

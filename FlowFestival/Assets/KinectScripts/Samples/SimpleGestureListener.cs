@@ -5,6 +5,7 @@ using System;
 public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
 {
 	// GUI Text to display the gesture messages.
+	public float swipeForce = 400.0f;
 	public GUIText GestureInfo;
 	private GameObject[] smeti;
 	// private bool to track if progress message has been displayed
@@ -74,36 +75,87 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 	{
 		string sGestureText = gesture + " detected";
 		Debug.Log (gesture + " detected");
-		if (gesture.ToString() == "SwipeRight") {
+		if (gesture.ToString () == "SwipeRight") {
 			Debug.Log ("SWIPE RIGHT");
-			smeti = GameObject.FindGameObjectsWithTag("Locked");
-			foreach ( GameObject smet in smeti){
+			smeti = GameObject.FindGameObjectsWithTag ("Locked");
+			foreach (GameObject smet in smeti) {
 				//smet.tag="Smeti";
-				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				Rigidbody rb = smet.GetComponent<Rigidbody> ();
 				rb.useGravity = true;
-				rb.AddForce(200,0,0);
+				rb.AddForce (-swipeForce, 0, 0);
 			}
-			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint>();
-			foreach ( PullToPoint skr in skripte){
+			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint> ();
+			foreach (PullToPoint skr in skripte) {
 
-				if(skr.smet!=null){
+				if (skr.smet != null) {
 					skr.smet.tag = "Smeti";
 					skr.smet = null;
 				}
 				skr.hasSmet = false;
 			}
-		} else if (gesture.ToString() == "SwipeLeft") {
+		} else if (gesture.ToString () == "SwipeLeft") {
 			Debug.Log ("SWIPE LEFT");
-			smeti = GameObject.FindGameObjectsWithTag("Locked");
-			foreach ( GameObject smet in smeti){
+			smeti = GameObject.FindGameObjectsWithTag ("Locked");
+			foreach (GameObject smet in smeti) {
 				//smet.tag="Smeti";
-				Rigidbody rb = smet.GetComponent<Rigidbody>();
+				Rigidbody rb = smet.GetComponent<Rigidbody> ();
 				rb.useGravity = true;
-				rb.AddForce(-200,0,0);
+				rb.AddForce (swipeForce, 0, 0);
 			}
-			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint>();
-			foreach ( PullToPoint skr in skripte){
-				if(skr.smet!=null){
+			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint> ();
+			foreach (PullToPoint skr in skripte) {
+				if (skr.smet != null) {
+					skr.smet.tag = "Smeti";
+					skr.smet = null;
+				}
+				skr.hasSmet = false;
+			}
+		} else if (gesture.ToString () == "Jump") {
+			Debug.Log ("JUMP");
+			smeti = GameObject.FindGameObjectsWithTag ("Locked");
+			foreach (GameObject smet in smeti) {
+				//smet.tag="Smeti";
+				Rigidbody rb = smet.GetComponent<Rigidbody> ();
+				rb.useGravity = true;
+				rb.AddForce (0, swipeForce, 0);
+			}
+			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint> ();
+			foreach (PullToPoint skr in skripte) {
+				if (skr.smet != null) {
+					skr.smet.tag = "Smeti";
+					skr.smet = null;
+				}
+				skr.hasSmet = false;
+			}
+		}else if (gesture.ToString () == "Push") {
+			Debug.Log ("Push");
+			smeti = GameObject.FindGameObjectsWithTag ("Locked");
+			foreach (GameObject smet in smeti) {
+				//smet.tag="Smeti";
+				Rigidbody rb = smet.GetComponent<Rigidbody> ();
+				rb.useGravity = true;
+				rb.AddForce (0, 0, -swipeForce);
+			}
+			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint> ();
+			foreach (PullToPoint skr in skripte) {
+				if (skr.smet != null) {
+					skr.smet.tag = "Smeti";
+					skr.smet = null;
+				}
+				skr.hasSmet = false;
+			}
+		} else if (gesture.ToString () == "Pull") {
+			Debug.Log ("Push");
+			smeti = GameObject.FindGameObjectsWithTag ("Locked");
+			foreach (GameObject smet in smeti) {
+				//smet.tag="Smeti";
+				Rigidbody rb = smet.GetComponent<Rigidbody> ();
+				rb.useGravity = true;
+				rb.AddForce (0, 0, swipeForce);
+			}
+			PullToPoint[] skripte = Resources.FindObjectsOfTypeAll<PullToPoint> ();
+			foreach (PullToPoint skr in skripte) {
+				if (skr.smet != null) {
 					skr.smet.tag = "Smeti";
 					skr.smet = null;
 				}
