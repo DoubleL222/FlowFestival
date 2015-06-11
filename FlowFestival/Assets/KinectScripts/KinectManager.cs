@@ -1099,7 +1099,7 @@ public class KinectManager : MonoBehaviour
 		}
 		
 		Debug.Log("Waiting for users.");
-		Character.SetActive (false);
+		//Character.SetActive (false);
 		KinectInitialized = true;
 	}
 	
@@ -1610,7 +1610,7 @@ public class KinectManager : MonoBehaviour
 		if(AllPlayersCalibrated)
 		{
 			Debug.Log("All players calibrated.");
-			Character.SetActive(true);
+			//Character.SetActive(true);
 			if(CalibrationText != null)
 			{
 				CalibrationText.GetComponent<GUIText>().text = "";

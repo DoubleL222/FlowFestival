@@ -30,7 +30,7 @@ public class FreezeScript : MonoBehaviour {
 			col.attachedRigidbody.angularVelocity = Vector3.zero;
 		}
 	}
-	void OnCollisionExit(Collider col){
+	void OnTriggerExit(Collider col){
 		if (col.gameObject.tag == "Frozen") {
 			col.gameObject.tag = "Smeti";
 		}
