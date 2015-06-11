@@ -14,6 +14,7 @@ public class levelMaker : MonoBehaviour {
 	public float sirinaX=5.0f;
 	public float dolzinaZ=5.0f;
 	public float visinaY=5.0f;
+	public int steviloSmetiPrivlek=0;
 	private int steviloSmeti;
 	private float l,w,h;
 	public GameObject[] smeti;
@@ -57,7 +58,16 @@ public class levelMaker : MonoBehaviour {
 			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
 			h = visinaY;
 			int indeks =(int)(Random.Range(0,smeti.Length-1));
-			Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity);
+			GameObject obj = Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity) as GameObject;
+			obj.gameObject.tag="Frozen";
+		}
+		for(int i=0; i<steviloSmetiPrivlek; i++) {
+			w = Random.Range (-sirinaX / 2, sirinaX / 2);
+			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
+			h = visinaY;
+			int indeks =(int)(Random.Range(0,smeti.Length-1));
+			GameObject obj = Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity) as GameObject;
+			obj.gameObject.tag="Smeti";
 		}
 	}
 	// Update is called once per frame
