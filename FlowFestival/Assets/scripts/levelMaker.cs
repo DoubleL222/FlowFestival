@@ -23,12 +23,16 @@ public class levelMaker : MonoBehaviour {
 	public float zamikTal = 2.0f;
 	private GameObject[] staticneSmeti;
 	public float waitTime;
-	public float startTime;
+	private float startTime;
+	private bool fixated = false;
+	public Slider smetiSliderDin;
+	public Text smetiTextDin;
 
 	private bool started;
 	// Use this for initialization
 	void Start () {
-		staticneSmeti = new GameObject[steviloSmeti];
+		startTime = 0.0f;
+		fixated = false;
 		GameObject center = Instantiate (levelCube, new Vector3(0,cubeSize/2.0f,0),Quaternion.identity) as GameObject;
 		GameObject leftWall = Instantiate (wallCube, new Vector3 (-cubeSize / 2.0f - zamik, cubeSize / 2.0f, 0), Quaternion.identity) as GameObject;
 		GameObject rightWall = Instantiate (wallCube, new Vector3 (cubeSize / 2.0f + zamik, cubeSize / 2.0f, 0), Quaternion.identity) as GameObject;
@@ -59,15 +63,22 @@ public class levelMaker : MonoBehaviour {
 	public void updateText(){
 		smetiText.text = smetiSlider.value.ToString ();
 	}
+	public void updateTextDin(){
+		smetiTextDin.text = smetiSliderDin.value.ToString ();
+	}
 	public void startLevel(){
+
 		meni.enabled = false;
+
+		steviloSmetiPrivlek = (int)smetiSliderDin.value;
 		steviloSmeti = (int)smetiSlider.value;
+		staticneSmeti = new GameObject[steviloSmeti];
 		for (int i=0; i<steviloSmeti; i++) {
 			w = Random.Range (-sirinaX / 2, sirinaX / 2);
 			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
 			h = visinaY;
-			//int indeks =(int)(Random.Range(0,smeti.Length-1));
-			int indeks = 0;
+			int indeks =(int)(Random.Range(0,smeti.Length-1));
+			//int indeks = 0;
 			GameObject obj = Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity) as GameObject;
 			obj.gameObject.tag="Frozen";
 			staticneSmeti[i] = obj;
@@ -76,16 +87,29 @@ public class levelMaker : MonoBehaviour {
 			w = Random.Range (-sirinaX / 2, sirinaX / 2);
 			l = Random.Range (-dolzinaZ / 2, dolzinaZ / 2);
 			h = visinaY;
-			//int indeks =(int)(Random.Range(0,smeti.Length-1));
-			int indeks = 0;
+			int indeks =(int)(Random.Range(0,smeti.Length-1));
+			//int indeks = 0;
 			GameObject obj = Instantiate(smeti[indeks], new Vector3(w,h,l), Quaternion.identity) as GameObject;
 			obj.gameObject.tag="Smeti";
 		}
+		startTime = Time.time;
 	}
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Space)){
-			Application.LoadLevel(Application.loadedLevel);
+			DestroyImmediate(Camera.main.gameObject);
+			Application.LoadLevel("TestLevel");
+
+		}
+		if (startTime!=0.0f && !fixated && (Time.time - startTime) >= waitTime) {
+			Debug.Log ("ZANKA PANKA");
+			foreach (GameObject smet in staticneSmeti){
+				if(smet != null){
+					Rigidbody rb = smet.GetComponent<Rigidbody>();
+					Destroy(rb);
+					fixated = true;
+				}
+			}
 		}
 	}
 }
